@@ -1,4 +1,6 @@
-server:
-  port: 4567
+event:
+  push:
+    script:
+    targetBranch:
   
 management.endpoints.web.exposure.include: '*'

@@ -2,12 +2,12 @@ package eu.miroslavlehotsky.githubwebhook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class GithubWebhookApplication {
+public class GithubWebhookApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GithubWebhookApplication.class, args);
 	}
-
 }

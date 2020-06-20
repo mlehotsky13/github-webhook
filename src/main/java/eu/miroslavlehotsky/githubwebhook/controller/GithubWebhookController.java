@@ -11,7 +11,7 @@ import eu.miroslavlehotsky.githubwebhook.model.GithubPushEvent;
 import eu.miroslavlehotsky.githubwebhook.service.GithubWebhookService;
 
 @RestController
-@RequestMapping("/github-webhook/events")
+@RequestMapping("/events")
 public class GithubWebhookController {
 	
 	@Autowired

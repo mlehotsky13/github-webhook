@@ -21,7 +21,8 @@ public class GithubWebhookServiceImpl implements GithubWebhookService {
 		try {
 			String branch = pushEvent.getRef().split("/")[pushEvent.getRef().split("/").length - 1];
 			if (targetBranch.equals(branch)) {
-				Runtime.getRuntime().exec(new String[] { pushEventScript });
+				String repository = pushEvent.getRepository().getName();
+				Runtime.getRuntime().exec(new String[] { pushEventScript, repository, branch });
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
